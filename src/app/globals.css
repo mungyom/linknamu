@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 배경 그라데이션은 스크롤과 무관하게 화면에 고정한다.
+   (iOS Safari는 background-attachment: fixed를 지원하지 않아 고정 레이어를 쓴다.) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 45% at 15% 10%, rgba(255, 255, 255, 0.7), transparent 70%),
+    radial-gradient(55% 45% at 90% 85%, rgba(251, 191, 160, 0.45), transparent 70%),
+    linear-gradient(165deg, #fdf8f0 0%, #fcefe3 45%, #f9dcc8 100%);
+}
+
+.dark body::before {
+  background:
+    radial-gradient(60% 45% at 15% 10%, rgba(120, 72, 44, 0.35), transparent 70%),
+    radial-gradient(55% 45% at 90% 85%, rgba(154, 84, 52, 0.3), transparent 70%),
+    linear-gradient(165deg, #1a1512 0%, #211915 50%, #2b1d17 100%);
+}

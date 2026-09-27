@@ -7,10 +7,10 @@ export type LinkItem = {
 // TODO: 아래 값은 모두 보여 주기용 더미 값이다. 실제 내용으로 교체할 것.
 
 export const profile = {
-  name: "김클로",
-  bio: "세계 최강 바이브코더",
-  // public/ 폴더에 실제 사진을 넣고 경로를 바꾸면 된다. 비워두면 이니셜이 표시된다.
-  image: "/profile-dummy.svg",
+  name: "김장닭",
+  bio: "풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요",
+  // public/ 폴더 기준 경로. 비워두면 이니셜이 표시된다.
+  image: "/mgkim.jpg",
 };
 
 export const links: LinkItem[] = [
